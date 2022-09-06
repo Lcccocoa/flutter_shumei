@@ -62,7 +62,8 @@ class _MyAppState extends State<MyApp> {
               SizedBox(
                 width: 300,
                 height: 300,
-                child: ShuMeiWidget(),
+                child:
+                    ShuMeiWidget(300, 100, 'JPOqfDF7RbznT3o84paO', 'default'),
               ),
             ],
           ),

@@ -10,8 +10,7 @@
   [registrar addMethodCallDelegate:instance channel:channel];
 
   ShuMeiViewFactory* factory =
-        [[ShuMeiViewFactory alloc] initWithMessenger:registrar.messenger];
-
+        [[ShuMeiViewFactory alloc] initWithMessenger:[registrar messenger]];
   [registrar registerViewFactory:factory withId:@"shumei.view.type"];
 }
 

@@ -18,6 +18,8 @@ A new Flutter project.
   s.dependency 'Flutter'
   s.dependency 'Flutter'
   s.platform = :ios, '9.0'
+  s.vendored_libraries = 'Lib/*.{a}'
+  s.static_framework = true
 
   # Flutter.framework does not contain a i386 slice.
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES', 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'i386' }
