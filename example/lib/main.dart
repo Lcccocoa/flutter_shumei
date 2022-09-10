@@ -59,7 +59,7 @@ class _MyAppState extends State<MyApp> {
           child: Column(
             children: [
               Text('Running on: $_platformVersion\n'),
-              SizedBox(
+              const SizedBox(
                 width: 300,
                 height: 300,
                 child:

@@ -26,6 +26,7 @@ class _ShuMeiWidgetState extends State<ShuMeiWidget> {
   void initChannel(String name) {
     channel = MethodChannel(name);
     channel!.setMethodCallHandler((call) async {
+      print(call.toString());
       switch (call.method) {
         case 'onError':
           break;

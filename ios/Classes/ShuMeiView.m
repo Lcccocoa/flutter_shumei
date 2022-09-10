@@ -22,6 +22,10 @@
                              binaryMessenger:_messenger];
 }
 
+- (NSObject<FlutterMessageCodec> *)createArgsCodec {
+    return [FlutterStandardMessageCodec sharedInstance];
+}
+
 @end
 
 @interface ShuMeiView ()<SmCaptchaProtocol>
@@ -44,14 +48,11 @@
         
         //
         NSDictionary *dict = [NSDictionary dictionaryWithDictionary:args];
-//        NSNumber* width = dict[@"width"];
-//        NSNumber* height = dict[@"height"];
-//        NSString* organization = dict[@"organization"];
-//        NSString* appid = dict[@"appid"];
-        NSNumber* width = @300;
-        NSNumber* height = @200;
-        NSString* organization = @"JPOqfDF7RbznT3o84paO";
-        NSString* appid = @"default";
+        printf(@"args:%@", args);
+        NSNumber* width = dict[@"width"];
+        NSNumber* height = dict[@"height"];
+        NSString* organization = dict[@"organization"];
+        NSString* appid = dict[@"appid"];
         
         // 构造数美验证码WEBVIEW对象，目前宽高比为3:2
         _webview = [[SmCaptchaWKWebView alloc] init];
